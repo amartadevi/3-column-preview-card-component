@@ -1,0 +1,116 @@
+@import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lexend+Deca&display=swap');
+
+:root{
+    --Bright-orange: hsl(31, 77%, 52%);
+    --Dark-cyan: hsl(184, 100%, 22%);
+    --Very-dark-cyan: hsl(179, 100%, 13%);
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: "Big Shoulders Display", sans-serif;
+    font-size: 15px;
+    background-color: hsl(0, 0%, 95%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 45px;
+}
+.column-preview{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    width: 800px;
+}
+.column-1{
+    background-color: var(--Bright-orange);
+    padding: 40px;
+    border-top-left-radius: 15px;
+    border-bottom-left-radius: 15px;
+}
+.column-2{
+    background-color: var(--Dark-cyan);
+    padding: 40px;
+}
+.column-3{
+    padding: 40px;
+    background-color: var(--Very-dark-cyan);
+    border-top-right-radius: 15px;
+    border-bottom-right-radius: 15px;
+}
+img{
+    padding-bottom: 25px;
+}
+
+.column-text{
+    line-height: 1.6;
+    font-weight:normal;
+    font-size: 12px;
+    color: hsla(0, 0%, 100%, 0.75);;
+    margin-top: 16px;
+    margin-bottom: 4.5rem;
+    font-family: "Lexend Deca", sans-serif;
+}
+h2{
+    text-transform: uppercase;
+    color: hsl(0, 0%, 95%);
+
+}
+.column-button{
+    width: 130px;
+    padding: 10px;
+    border: none;
+    border-radius: 20px;
+    font-weight: 700;
+    color: hsl(0, 0%, 95%);
+}
+
+.button1{
+    color: var(--Bright-orange);
+}
+.button2{
+    color: var(--Dark-cyan);
+}
+.button3{
+    color: var(--Very-dark-cyan);
+}
+.column-1 .column-button:hover {
+    background-color: var(--Bright-orange);
+    color: hsl(0, 0%, 95%);
+    border: 1.5px solid hsl(0, 0%, 95%);
+    font-weight: 700;
+}
+
+.column-2 .column-button:hover {
+    background-color: var(--Dark-cyan);
+    color: hsl(0, 0%, 95%); 
+    border: 1.5px solid hsl(0, 0%, 95%);
+    font-weight: 700;
+}
+
+.column-3 .column-button:hover {
+    background-color: var(--Very-dark-cyan);
+    color: hsl(0, 0%, 95%); 
+    border: 1.5px solid hsl(0, 0%, 95%);
+    font-weight: 700;
+}
+
+@media (max-width: 375px) {
+    .column-preview {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+    }
+    .column-1 {
+        border-radius: 8px 8px 0 0;
+    }
+    .column-3 {
+        border-radius: 0 0 8px 8px;
+    }
+}
